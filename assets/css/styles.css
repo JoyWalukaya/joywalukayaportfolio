@@ -205,6 +205,9 @@ img {
 }
 .home__blob {
   fill: var(--first-color);
+  width: 280px;
+  position: absolute;
+  top:-350px;
   
 }
 .home__blob-img {
@@ -707,7 +710,7 @@ body.dark-mode {
   position: relative;
   display: inline-block;
   width: 100%;
-  max-width: 400px; /* Adjust based on your layout */
+  max-width: 200px; /* Adjust based on your layout */
   border-radius: 10px;
   overflow: hidden;
 }
@@ -742,4 +745,11 @@ body.dark-mode {
 
 .work__img:hover img {
   transform: scale(1.1); /* Slight zoom effect */
+}
+.overlay p {
+  font-size: 12px; /* Reduce font size */
+  line-height: 1.2; /* Adjust line spacing for better fit */
+  padding: 5px; /* Reduce padding */
+  max-width: 90%; /* Ensure text doesn't overflow */
+  word-wrap: break-word; /* Prevent long words from breaking layout */
 }
