@@ -780,3 +780,48 @@ body.dark-mode {
     margin: 20px auto;
   }
 }
+@media (max-width: 768px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .nav__menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .nav__menu.active {
+    display: flex;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav__item {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav__toggle {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  #dark-mode-toggle,
+  #cv-download {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
