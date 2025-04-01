@@ -780,77 +780,88 @@ body.dark-mode {
     margin: 20px auto;
   }
 }
-/* Base Styles (for larger screens) */
-body {
-  font-family: Arial, sans-serif;
-}
-
-.nav__menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.home__social {
-  display: flex;
-}
-
-.skills__container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.work__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-/* Mobile-specific Styles */
-@media (max-width: 768px) {
-  .nav__menu {
+/* Add a default media query for responsiveness */
+@media only screen and (max-width: 768px) {
+  /* Make the navbar items stack vertically on smaller screens */
+  .nav__list {
+      display: flex;
       flex-direction: column;
       align-items: flex-start;
+      width: 100%;
+  }
+
+  .nav__item {
+      width: 100%;
+      text-align: left;
+      padding: 10px;
+  }
+
+  /* Ensure the toggle button is displayed for small screens */
+  .nav__toggle {
+      display: block;
+  }
+
+  /* Make the header sections stack */
+  .home__data {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .home__img {
+      display: block;
+      margin: 0 auto;
+  }
+
+  /* Adjust skills section layout to be single-column on small screens */
+  .skills__container {
+      display: block;
+  }
+
+  .skills__data {
+      margin-bottom: 15px;
+  }
+
+  .skills__container img {
+      width: 100%;
+      margin-top: 20px;
+  }
+
+  /* Adjust section titles to fit better on smaller screens */
+  .section-title {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  /* Ensure contact form is responsive */
+  .contact__form {
+      width: 100%;
+  }
+
+  /* Adjust footer for mobile screens */
+  .footer__social {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+  }
+
+  .footer__icon {
+      margin: 0 10px;
+  }
+}
+
+/* For smaller screens, make sure the home section title is readable */
+@media only screen and (max-width: 480px) {
+  .home__title {
+      font-size: 1.5em;
   }
 
   .home__social {
-      flex-direction: column;
-      align-items: flex-start;
+      margin-top: 20px;
   }
 
-  .skills__container {
-      flex-direction: column;
-  }
-
-  .work__container {
-      grid-template-columns: 1fr;
-  }
-
-  .home__title {
-      font-size: 24px;
-  }
-
-  .nav__logo {
-      font-size: 20px;
-  }
-
-  /* Optional: Adjust section margins and paddings */
-  .section {
-      padding: 20px;
-  }
-}
-
-/* Tablet-specific Styles */
-@media (max-width: 1024px) {
-  .work__container {
-      grid-template-columns: repeat(2, 1fr);
-  }
-
-  .skills__container {
-      flex-direction: row;
-  }
-
-  .nav__menu {
-      flex-direction: row;
+  /* Adjust button sizes for smaller screens */
+  .button {
+      padding: 10px;
+      font-size: 1em;
   }
 }
