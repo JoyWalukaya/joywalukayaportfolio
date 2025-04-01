@@ -847,6 +847,21 @@ body.dark-mode {
   .footer__icon {
       margin: 0 10px;
   }
+
+  /* Add responsiveness for the Get CV and Dark Mode buttons */
+  #dark-mode-toggle, #cv-download {
+      width: auto; /* Allow buttons to retain their size */
+      padding: 10px 15px;
+      font-size: 16px;
+      margin: 5px 0; /* Add space between the buttons */
+  }
+
+  /* Group buttons together in a container */
+  .nav {
+      display: flex;
+      flex-direction: column; /* Stack buttons vertically on small screens */
+      align-items: center;
+  }
 }
 
 /* For smaller screens, make sure the home section title is readable */
@@ -863,5 +878,13 @@ body.dark-mode {
   .button {
       padding: 10px;
       font-size: 1em;
+  }
+
+  /* Adjust button layout for Get CV and Dark Mode on very small screens */
+  #dark-mode-toggle, #cv-download {
+      width: 100%; /* Make sure buttons span the full width */
+      margin-bottom: 10px; /* Space between buttons */
+      font-size: 14px;
+      padding: 12px;
   }
 }
