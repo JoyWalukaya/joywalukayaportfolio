@@ -213,6 +213,7 @@ img {
 .home__blob-img {
 width: 300px;
 }
+
 /*BUTTONS*/
 .button {
   display: inline-block;
@@ -752,4 +753,30 @@ body.dark-mode {
   padding: 5px; /* Reduce padding */
   max-width: 90%; /* Ensure text doesn't overflow */
   word-wrap: break-word; /* Prevent long words from breaking layout */
+}
+@media (max-width: 768px) {
+  .home__data {
+    text-align: center;
+    padding: 20px 10%;
+  }
+  .home__title {
+    font-size: 2rem;
+  }
+  .home__social {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .home__social-icon {
+    font-size: 2rem;
+    margin: 0 10px;
+  }
+  .home__img {
+    width: 100%; /* Make the SVG fill the width of the container */
+    height: auto; /* Keep the aspect ratio */
+  }
+  .button {
+    display: block;
+    margin: 20px auto;
+  }
 }
