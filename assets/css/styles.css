@@ -108,6 +108,7 @@ img {
   justify-content: space-between;
   align-items: center;
   font-weight: var(--font-semi);
+  width: 100%;
 
 }
 @media screen and (max-width: 767px) {
@@ -118,9 +119,24 @@ img {
     width: 80%;
     height: 100%;
     padding: 2rem;
-    background-color: var(--second-color);
-    transition: 0.5s;
+    background: url('https://images.pexels.com/photos/12623603/pexels-photo-12623603.jpeg?auto=compress&cs=tinysrgb&w=600') 
+    no-repeat center center fixed;    transition: 0.5s;
   }
+  /* Default (light mode) */
+.nav__toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: black; /* Default color */
+}
+
+/* Dark Mode */
+.dark-mode .nav__toggle {
+  color: #1e90ff; /* Bright blue in dark mode */
+}
+
 }
 .nav__list :hover{
   transform: scale(1.09);
@@ -611,7 +627,6 @@ body.dark-mode {
 
 /* Navbar */
 
-/* Ensure navbar text is visible in dark mode */
 
 /* Section Titles */
 .section-title {
@@ -630,20 +645,35 @@ a {
 body.dark-mode a {
     color: #1e90ff ; /* Light blue for dark mode */
 }
-#dark-mode-toggle {
-    background-color: #1e90ff; /* Bright blue */
-    color: black; /* White text */
-    border: none;
-    padding: 5px 5px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 30px; /* Fully rounded corners */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-left: -150px;
-
-
+#dark-mode-toggle, #cv-download {
+  background-color: #1e90ff;
+  color: black;
+  border: none;
+  width: 80px; /* Ensure same width */
+  height: 40px; /* Ensure same height */
+  padding: 5px; /* Keep padding small */
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex; /* Align text properly */
+  align-items: center; /* Centers text vertically */
+  justify-content: center; /* Centers text horizontally */
+  text-align: center;
+  display: flex;
+  
 }
+#dark-mode-toggle{
+  margin-left: -150px;
+}
+.button-container {
+  display: flex; /* Makes buttons align in a row */
+  gap: 5px; /* Adds space between buttons */
+  align-items: center; /* Aligns them properly */
+  justify-content: flex-start;
+}
+
 
 /* Hover effect */
 #dark-mode-toggle:hover {
@@ -660,21 +690,7 @@ body.dark-mode #dark-mode-toggle {
     background-color: #1e90ff; /* Lighter blue in dark mode */
     color: black;
 }
-#cv-download {
-    background-color: #1e90ff; /* Same blue color */
-    color: black;
-    border: none;
-    padding: 5px 5px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 30px; /* Rounded corners */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    display: inline-block;
-    margin-left: -120px;
 
-}
 
 /* Hover effect */
 #cv-download:hover {
@@ -754,34 +770,45 @@ body.dark-mode {
   max-width: 90%; /* Ensure text doesn't overflow */
   word-wrap: break-word; /* Prevent long words from breaking layout */
 }
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
   .home__data {
     text-align: center;
     padding: 20px 10%;
   }
+
   .home__title {
     font-size: 2rem;
+    justify-content: flex-start;
+    text-align: center; /* Keep title centered */
   }
+
   .home__social {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    flex-direction: column; /* Stack the social icons vertically */
+    justify-content: center; /* Center them vertically */
+    align-items: center; /* Center the icons horizontally */
+    margin: 0; /* Remove unnecessary margin */
+    padding: 0; /* Remove unnecessary padding */
   }
+
   .home__social-icon {
     font-size: 2rem;
-    margin: 0 10px;
+    margin: 5px 0; /* Reduce the space between the icons */
   }
+
   .home__img {
     width: 100%; /* Make the SVG fill the width of the container */
     height: auto; /* Keep the aspect ratio */
   }
+
   .button {
     display: block;
     margin: 20px auto;
   }
 }
+
 /* Add a default media query for responsiveness */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1300px) {
   /* Make the navbar items stack vertically on smaller screens */
   .nav__list {
       display: flex;
@@ -865,26 +892,53 @@ body.dark-mode {
 }
 
 /* For smaller screens, make sure the home section title is readable */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1300px) {
   .home__title {
       font-size: 1.5em;
+      margin-top: 50px;
+
+
   }
 
   .home__social {
-      margin-top: 20px;
-  }
+    display: flex; /* Enables horizontal alignment */
+    flex-direction: row; /* Ensures items are in a row */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Aligns them properly */
+    margin-top: 0px;
+    width: 100%;
+}
+
+  .home__blob {
+    margin-bottom: 200px;
+    width: 20%;
+    align-self: center;
+}
 
   /* Adjust button sizes for smaller screens */
   .button {
-      padding: 10px;
+      padding: 5px;
       font-size: 1em;
   }
 
   /* Adjust button layout for Get CV and Dark Mode on very small screens */
-  #dark-mode-toggle, #cv-download {
-      width: 100%; /* Make sure buttons span the full width */
-      margin-bottom: 10px; /* Space between buttons */
-      font-size: 14px;
-      padding: 12px;
-  }
+  
+    #dark-mode-toggle, 
+    #cv-download {
+        position: absolute; /* Keep them positioned at the top */
+        top: 10px;
+        font-size: clamp(12px, 2vw, 16px); /* Adjust font size dynamically */
+        padding: clamp(8px, 2vw, 12px); /* Adjust padding dynamically */
+        width: auto; /* Prevents full width */
+    }
+
+    #dark-mode-toggle {
+        left: 5%;
+    }
+
+    #cv-download {
+        left: 20%; /* Adjust this value if buttons overlap */
+    }
 }
+
+  
