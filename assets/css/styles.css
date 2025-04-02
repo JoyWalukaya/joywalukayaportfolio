@@ -897,30 +897,48 @@ body.dark-mode {
 @media only screen and (max-width: 1300px) {
   .home__title {
       font-size: 1.5em;
-      margin-top: 50px;
-
-
+      margin-top: 20px;
+      margin-right: 130px;
+      text-align: left; /* Aligns all words to the left */
+      display: inline-block; /* Ensures it doesn't take full width */
+      max-width: fit-content; /* Keeps text from stretching */
+      word-wrap: break-word; /* Ensures long words wrap instead of overflowing */
+      max-width: 100%; 
+      font-size: 4vw; 
+      min-height: auto; /* Ensures enough space */
+      white-space: normal; 
   }
 
+
   .home__social {
-    display: flex; /* Enables horizontal alignment */
-    flex-direction: row; /* Ensures items are in a row */
-    justify-content: center; /* Centers items horizontally */
-    align-items: center; /* Aligns them properly */
-    margin-top: 0px;
-    width: 100%;
-}
+    display: flex;
+    flex-direction: row; /* Keep items in a row */
+    justify-content: flex-start; /* Align to the left */
+    align-items: center;
+    margin-top: -150px; /* Remove excessive negative margin */
+    margin-left: 50px; /* Small shift to align */
+    width: auto; /* Prevent unnecessary stretching */
+    overflow: visible; /* Ensure no content gets cut off */
+  }
+
+  .home__social-icon {
+    font-size: 1.5em; /* Adjust size if needed */
+    margin: 0 8px; /* Give some spacing between icons */
+  }
+
 
   .home__blob {
-    margin-bottom: 200px;
+    margin-top: 50px;
     width: 20%;
-    align-self: center;
+
 }
 
   /* Adjust button sizes for smaller screens */
   .button {
-      padding: 5px;
+      padding: 3px;
       font-size: 1em;
+      margin-right:180px ;
+
   }
 
   /* Adjust button layout for Get CV and Dark Mode on very small screens */
