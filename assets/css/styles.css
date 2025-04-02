@@ -678,6 +678,7 @@ body.dark-mode a {
 /* Hover effect */
 #dark-mode-toggle:hover {
     background-color: #2b282b; /* Darker blue on hover */
+    transform: scale(1.2);
 }
 
 /* Click effect */
@@ -695,6 +696,7 @@ body.dark-mode #dark-mode-toggle {
 /* Hover effect */
 #cv-download:hover {
     background-color: #2b282b;
+    transform: scale(1.2);
 }
 
 /* Click effect */
