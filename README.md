@@ -1,14 +1,14 @@
-My Digital Space.
+**My Digital Space.**
 
 Welcome to my personal portfolio ,a carefully crafted digital identity that represents my journey, skills, and creative vision. This isn't just a website; it's an interactive experience designed to showcase my work, innovation, and dedication.  
 
-🌍 Live Experience 
+**🌍 Live Experience**
 🔗 Explore Here :https://joywalukayaportfolio.netlify.app/
 
-🧩 What Makes It Special? 
+**🧩 What Makes It Special?**
 This portfolio isn’t a generic template ,it’s a reflection of my personality, skills, and ambitions. It combines aesthetics, interactivity, and performance to deliver an engaging browsing experience.  
 
-✨ Highlights: 
+**✨ Highlights:** 
 - **Fluid animations & transitions**—because static is boring.  
 - **Dark Mode Magic**—your eyes will thank you.  
 - **Intelligent Layout**—no wasted space, only well-structured content.  
@@ -16,7 +16,6 @@ This portfolio isn’t a generic template ,it’s a reflection of my personality
 
 🛠️ Built With Precision 
 Every line of code serves a purpose. Here’s the tech stack behind it:  
-
 - **HTML5 & CSS3** for structure & style  
 - **JavaScript** for interactivity  
 - **Git & GitHub** for version control  
@@ -31,7 +30,7 @@ Every line of code serves a purpose. Here’s the tech stack behind it:
 │── README.md        # You’re reading it!  
  
 
-📬 Let’s Connect 
+**📬 Let’s Connect** 
 Whether you’re here to collaborate, hire, or just browse, let’s stay in touch!  
 📧 **Email:** walukayajoy@gmail.com
 💼 **LinkedIn:** https://www.linkedin.com/in/joy-walukaya-93b1062a1  
